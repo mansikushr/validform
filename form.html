@@ -1,0 +1,176 @@
+<!DOCTYPE html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+    <title>
+		Google Form
+	</title>
+	<meta name="genrator" content="editplus">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
+    <meta name="description" content="">
+       <link rel="stylesheet" href="createvalidation.css">
+       <link rel="stylesheet" href="K:\fontawesome\fontawesome-free-5.13.0-web\fontawesome-free-5.13.0-web\css\all.min.css">
+    
+     <script type="text/javascript" src="createvalidation.js"></script>
+	<style>
+		body {
+            background:url('network.jpg');
+            justify-content: center;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .container{
+            top: 50px;
+            left: 10%;
+            transform:translate(10,20);
+            position:absolute;
+            background: white;
+            border-radius: 1px;
+            box-shadow: 0 0 10px lightslategray;
+            padding:  20px;
+           
+            max-width: 1000px;
+        }
+        .form-center{
+            display:flex;
+            justify-content: center;
+        }
+        .form-name{
+            color: rgba(255, 255, 255, 0.686);
+            font-weight: bold;
+            font-size: 10px;
+            margin-bottom:20px;
+        }
+        .field-name-block{
+            text-align: right;
+            padding-right: 50px;
+            width: 40%;
+            display: inline-block;
+        }
+        .field-name{
+            color: black;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin: 10px;
+            
+        }
+        .field-input-block{
+            display: inline-block;
+        }
+        input{
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            border-radius: 2px;
+            border: none;
+            outline: none;
+            text-align: left;
+            background: rgb(239, 238, 244);
+        }
+        .button-block{
+            text-align: center;
+        }
+        .button{
+            margin: 5px;
+            padding: 10px;
+            
+            background: rgb(103, 114, 234);
+            color: rgb(70, 62, 62);
+            outline: none;
+            border-radius: 2px;
+            font-size: 20px;
+            text-align: center;
+            width: 150px;
+
+        }
+        .button:hover{
+            color: black;
+            background: rgb(175, 155, 194)
+        }
+        .warning{
+            color: red;
+            background: yellow;
+            font-size: 15px;
+            border-radius: 50%;
+        }
+        </style>
+</head>
+<body onload="onload()">
+    
+   <div class="container">
+    
+     <div class="form-center">
+        <form id="signup-form">
+            <div class="field-name-block">
+                <label class="field-name">Select your source :|</label>
+               
+            </div>
+            
+            Google Cloud Storage
+            
+            <div class="field-name-block">
+                <label class="field-name">Provide a name for pipeline:|</label>
+
+            </div>
+            <div class="field-input-block">
+                <input id="provideName" type="text" placeholder="e.g., cust_shop_energy_gkateway001" maxlength="5"/>
+                <i id="providenamewarning" class="fas fa-exclamation-circle warning warning-hide"></i>
+            </div>
+            <div class="field-name-block">
+                <label class="field-name">GCS project name :|</label>
+
+            </div>
+            <div class="field-input-block">
+                <input id="projectName" type="text" placeholder="project-id" maxlength="5"/>
+                <i id="projectnamewarning" class="fas fa-exclamation-circle warning warning-hide"></i>
+            </div>
+            <div class="field-name-block">
+                <label class="field-name">GCS bucket name :|</label>
+
+            </div>
+            <div class="field-input-block">
+                <input id="bucketName" type="text" placeholder="gs://your-bucket" maxlength="5"/>
+                <i id="bucketnamewarning" class="fas fa-exclamation-circle warning warning-hide"></i>
+            </div>
+            
+            <div class="field-name-block">
+                <label class="field-name">Input Cloud Storage File(s) :|</label>
+
+            </div>
+            <div class="field-input-block">
+                <input id="fileName" type="text" placeholder="GCS location of your files" maxlength="5"/>
+                <i id="filenamewarning" class="fas fa-exclamation-circle warning warning-hide"></i>
+            </div>
+            <div class="field-name-block">
+                <label class="field-name">GCS credentials :|</label>
+
+            </div>
+            <div class="field-input-block">
+                <input id="credentialsName" type="text" placeholder="" maxlength="5"/>
+                
+                <i id="credentialswarning" class="fas fa-exclamation-circle warning warning-hide"></i>
+
+            </div>
+            <div class="field-name-block">
+                <label class="field-name">Run Every :|</label>
+
+            </div>
+            <div class="field-input-block">
+                <input id="runName" type="text" placeholder="(in minutes)" maxlength="5"/>
+                <i id="runwarning" class="fas fa-exclamation-circle warning warning-hide"></i>
+
+            </div>
+            <div class="button-block"> 
+                <input type="button" value="Create" class="button" onclick="onSubmitClick()"/>
+                <input type="reset" value="Cancel" class="button" onclick="onCancelClick()"/>
+
+            </div>
+        </form>
+     </div>
+   </div>
+</body>
+</html>
